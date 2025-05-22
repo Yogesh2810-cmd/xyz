@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Cart & Checkout</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+  <div id="cart-items"></div>
+  <h3 id="total">Total: ₹0</h3>
+  <form id="order-form">
+    <input name="name" placeholder="Your Name" required>
+    <input name="email" placeholder="Your Email" required>
+    <input name="phone" placeholder="Your Phone" required>
+    <textarea name="address" placeholder="Delivery Address" required></textarea>
+  
+    <label>
+      <input type="radio" name="payment_method" value="Online" checked> Prepaid (Razorpay)
+    </label>
+    <label>
+      <input type="radio" name="payment_method" value="COD"> Cash on Delivery
+    </label>
+  
+    <button type="submit">Checkout</button>
+  </form>
+  
+</body>
+</html>
